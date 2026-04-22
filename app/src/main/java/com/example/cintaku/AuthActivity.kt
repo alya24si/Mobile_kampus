@@ -30,12 +30,12 @@ class AuthActivity : AppCompatActivity() {
 
          		val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
                  //Kondisi jika isLogin bernilai true
-                 val isLogin = sharedPref.getBoolean("isLogin", false)
-                if (isLogin) {
-                    val intent = Intent(this, MainActivity::class.java)                     
-                    startActivity(intent)
-                    finish()
-                }
+//                 val isLogin = sharedPref.getBoolean("isLogin", false)
+//                if (isLogin) {
+//                    val intent = Intent(this, MainActivity::class.java)
+//                    startActivity(intent)
+//                    finish()
+//                }
 
         
         binding.btnLogin.setOnClickListener {
@@ -43,12 +43,16 @@ class AuthActivity : AppCompatActivity() {
             val username = binding.username.text.toString()
             val password = binding.password.text.toString()
 
-            val editor = sharedPref.edit()
-            		editor.putBoolean("isLogin", true)
-            		editor.putString("username",username)
-            		editor.apply()
+
+
+
+
 
             if (username == password) {
+                val editor = sharedPref.edit()
+                    editor.putBoolean("isLogin", true)
+                    editor.putString("username",username)
+                    editor.apply()
 
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
