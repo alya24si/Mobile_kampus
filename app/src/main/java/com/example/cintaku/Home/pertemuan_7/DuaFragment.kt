@@ -1,4 +1,4 @@
-package com.example.cintaku.pertemuan_7
+package com.example.cintaku.Home.pertemuan_7
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.cintaku.R
 
 
-class TigaFragment : Fragment() {
+class DuaFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -16,8 +16,9 @@ class TigaFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tiga, container, false)
+        return inflater.inflate(R.layout.fragment_dua, container, false)
     }
+
 
 
 }

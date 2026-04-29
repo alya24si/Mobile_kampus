@@ -1,44 +1,45 @@
-package com.example.cintaku.pertemuan_3
+package com.example.cintaku.Home.pertemuan2
 
-import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.cintaku.databinding.ActivityThirdBinding
+import com.example.cintaku.R
 import com.google.android.material.appbar.MaterialToolbar
 
-class ThirdActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityThirdBinding
+class SecondActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding = ActivityThirdBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_second)
 
 
-        ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        binding.btnkirim.setOnClickListener {
-            val nomor = binding.inputNoTujuan.text
+        // Inisialisasi komponen
+        val inputNama: EditText = findViewById(R.id.inputNama)
+        val btnSubmit: Button = findViewById(R.id.btnSubmit)
 
-            Toast.makeText(this, "Pesan berhasil dikirim ke $nomor", Toast.LENGTH_SHORT).show()
+        btnSubmit.setOnClickListener {
+            val nama = inputNama.text
+            Log.e("Klik btnSubmit","Tombol berhasil di tekan. Isi dari inputNama = $nama")
 
-            val intent = Intent(this, ThirdResultActivity::class.java)
-            startActivity(intent)
+            Toast.makeText(this, "$nama", Toast.LENGTH_SHORT).show()
         }
     }
 
-    // 🔥 TOMBOL BACK
+    // 🔥 FUNGSI TOMBOL BACK
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             android.R.id.home -> {

@@ -1,4 +1,4 @@
-package com.example.cintaku.pertemuan_4
+package com.example.cintaku.Home.pertemuan_4
 
 import android.os.Bundle
 import android.util.Log

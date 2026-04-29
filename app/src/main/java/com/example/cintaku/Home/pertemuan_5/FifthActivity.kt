@@ -1,4 +1,4 @@
-package com.example.cintaku.pertemuan_5
+package com.example.cintaku.Home.pertemuan_5
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

@@ -3,20 +3,16 @@ package com.example.cintaku
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.cintaku.databinding.ActivityFourthBinding
 import com.example.cintaku.databinding.ActivityMainBinding
-import com.example.cintaku.databinding.ActivityThirdBinding
-import com.example.cintaku.pertemuan2.SecondActivity
-import com.example.cintaku.pertemuan_3.ThirdActivity
-import com.example.cintaku.pertemuan_3.ThirdResultActivity
-import com.example.cintaku.pertemuan_4.FourthActivity
-import com.example.cintaku.pertemuan_5.FifthActivity
-import com.example.cintaku.pertemuan_7.SevenActivity
+import com.example.cintaku.Home.pertemuan2.SecondActivity
+import com.example.cintaku.Home.pertemuan_3.ThirdActivity
+import com.example.cintaku.Home.pertemuan_4.FourthActivity
+import com.example.cintaku.Home.pertemuan_5.FifthActivity
+import com.example.cintaku.Home.pertemuan_7.SevenActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {

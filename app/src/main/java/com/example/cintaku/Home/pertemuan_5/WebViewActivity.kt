@@ -1,8 +1,11 @@
-package com.example.cintaku.pertemuan_5
+package com.example.cintaku.Home.pertemuan_5
 
+import android.graphics.Bitmap
+import android.graphics.Color
 import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -28,7 +31,7 @@ class WebViewActivity : AppCompatActivity() {
             setDisplayHomeAsUpEnabled(true)
 
             // ubah warna icon back
-            toolbar.navigationIcon?.setTint(android.graphics.Color.WHITE)
+            toolbar.navigationIcon?.setTint(Color.WHITE)
         }
 
         // ⭐ IMPROVISASI TOOLBAR (FADE IN ANIMATION)
@@ -44,7 +47,7 @@ class WebViewActivity : AppCompatActivity() {
             override fun onPageStarted(
                 view: WebView?,
                 url: String?,
-                favicon: android.graphics.Bitmap?
+                favicon: Bitmap?
             ) {
                 super.onPageStarted(view, url, favicon)
 
@@ -60,10 +63,10 @@ class WebViewActivity : AppCompatActivity() {
 
                 supportActionBar?.title = "Web Merdeka"
 
-                android.widget.Toast.makeText(
+                Toast.makeText(
                     this@WebViewActivity,
                     "Website berhasil dimuat",
-                    android.widget.Toast.LENGTH_SHORT
+                    Toast.LENGTH_SHORT
                 ).show()
             }
         }

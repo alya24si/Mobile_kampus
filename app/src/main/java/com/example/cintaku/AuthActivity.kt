@@ -8,9 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.cintaku.databinding.ActivityAuthBinding
-import com.example.cintaku.databinding.ActivityMainBinding
-import com.example.cintaku.pertemuan_4.FourthActivity
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 
 class AuthActivity : AppCompatActivity() {
