@@ -14,6 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cintaku">
         <activity
+            android:name=".BaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pertemuan_7.SevenActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".AuthActivity"
             android:exported="false" />
         <activity

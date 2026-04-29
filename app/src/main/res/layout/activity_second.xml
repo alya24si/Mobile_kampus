@@ -10,33 +10,24 @@
 
 
 
-    <!-- 🔥 TOOLBAR -->
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar"
-        android:layout_width="0dp"
-        android:layout_height="?attr/actionBarSize"
-        android:background="#A27979"
-        app:title="Second Activity"
-        app:titleTextColor="@android:color/white"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+
 
     <TextView
         android:id="@+id/textNama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ENTER YOUR NAME"
-        android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        android:textStyle="bold"
+        android:letterSpacing="0.15"
         android:shadowColor="#FFFFFF"
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="15"
-        android:letterSpacing="0.15"
+        android:text="ENTER YOUR NAME"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/inputNama"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.30" />
@@ -45,7 +36,7 @@
         android:id="@+id/inputNama"
         android:layout_width="260dp"
         android:layout_height="60dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="188dp"
         android:background="#80FFFFFF"
         android:elevation="12dp"
         android:gravity="center"
@@ -56,6 +47,7 @@
         android:textColorHint="#555555"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textNama" />
 
@@ -63,15 +55,16 @@
         android:id="@+id/btnSubmit"
         android:layout_width="220dp"
         android:layout_height="65dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="200dp"
+        android:backgroundTint="#FF4D9D"
         android:elevation="15dp"
+        android:letterSpacing="0.1"
         android:text="START GAME!!! "
         android:textColor="#FFFFFF"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:backgroundTint="#FF4D9D"
-        android:letterSpacing="0.1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputNama" />
 

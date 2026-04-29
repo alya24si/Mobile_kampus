@@ -11,8 +11,12 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.cintaku.databinding.ActivityFourthBinding
 import com.example.cintaku.databinding.ActivityMainBinding
 import com.example.cintaku.databinding.ActivityThirdBinding
+import com.example.cintaku.pertemuan2.SecondActivity
+import com.example.cintaku.pertemuan_3.ThirdActivity
 import com.example.cintaku.pertemuan_3.ThirdResultActivity
 import com.example.cintaku.pertemuan_4.FourthActivity
+import com.example.cintaku.pertemuan_5.FifthActivity
+import com.example.cintaku.pertemuan_7.SevenActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
@@ -40,6 +44,35 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("from", "Rumbai")
             intent.putExtra("age", 25)
 
+            startActivity(intent)
+        }
+
+        binding.btnToFourth.setOnClickListener {
+            val intent = Intent (this, FourthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToTwo.setOnClickListener {
+
+            val intent = Intent (this, SecondActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToThree.setOnClickListener {
+
+            val intent = Intent (this, ThirdActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToFive.setOnClickListener {
+
+            val intent = Intent (this, FifthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToSeven.setOnClickListener {
+
+            val intent = Intent (this, SevenActivity::class.java)
             startActivity(intent)
         }
 
