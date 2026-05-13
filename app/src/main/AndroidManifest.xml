@@ -14,12 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cintaku">
         <activity
+            android:name=".Home.pertemuan_9.NinthActivity"
+            android:exported="false" />
+        <activity
             android:name=".SplashScreenActivity"
             android:exported="false" />
         <activity
             android:name=".Home.pertemuan_7.SevenActivity"
             android:exported="false" />
-
         <activity
             android:name=".AuthActivity"
             android:exported="false" />
