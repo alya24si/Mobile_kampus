@@ -127,6 +127,17 @@
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal"/>
 
+
+        <Button
+            android:id="@+id/btnToTenth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Pertemuan 10"
+            android:backgroundTint="#997373"
+            android:textColor="@android:color/white"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal"/>
+
     </androidx.gridlayout.widget.GridLayout>
 
     <!-- Logout Button -->

@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.cintaku.AuthActivity
 import com.example.cintaku.Home.pertemuan2.SecondActivity
+import com.example.cintaku.Home.pertemuan_10.TenthActivity
 import com.example.cintaku.Home.pertemuan_3.ThirdActivity
 import com.example.cintaku.Home.pertemuan_4.FourthActivity
 import com.example.cintaku.Home.pertemuan_5.FifthActivity
@@ -76,6 +77,12 @@ class HomeFragment : Fragment() {
         binding.btnToNinth.setOnClickListener {
 
             val intent = Intent (requireContext(), NinthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToTenth.setOnClickListener {
+
+            val intent = Intent (requireContext(), TenthActivity::class.java)
             startActivity(intent)
         }
 
