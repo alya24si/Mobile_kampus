@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C5AC7F"
+    android:padding="32dp"
+    tools:context=".Message.tutorial.Tutorial3Fragment">
+
+    <!-- Ikon -->
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@android:mipmap/sym_def_app_icon"
+        android:contentDescription="Icon"
+        app:layout_constraintBottom_toTopOf="@+id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <!-- Judul -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Helloooooo"
+        android:textColor="#1B5E20"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvSubtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <!-- Deskripsi Singkat (1 baris) -->
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Silahkannnn"
+        android:textColor="#2E7D32"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+    <!-- Tombol -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mulai"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:paddingStart="48dp"
+        android:paddingEnd="48dp"
+        app:backgroundTint="#2E7D32"
+        app:cornerRadius="25dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

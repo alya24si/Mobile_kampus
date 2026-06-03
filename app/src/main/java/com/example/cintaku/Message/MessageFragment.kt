@@ -1,11 +1,20 @@
 package com.example.cintaku.Message
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContentProviderCompat
+import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
+import com.example.cintaku.Message.tutorial.TutorialMessageActivity
 import com.example.cintaku.R
 import com.example.cintaku.databinding.FragmentMessageBinding
 import com.example.cintaku.databinding.FragmentMoreBinding
@@ -44,10 +53,28 @@ class MessageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
         (requireActivity() as AppCompatActivity).supportActionBar?.apply {
-            title = "More"
+            title = "Message"
+        }
+            setHasOptionsMenu(true)
 
             val adapter = MessageAdapter(requireContext(), messageList)
             binding.listViewItems.adapter = adapter
         }
-}
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.message_toolbar_menu, menu)
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_tutorial -> {
+                val intent = Intent(requireContext(), TutorialMessageActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+}
+
+
