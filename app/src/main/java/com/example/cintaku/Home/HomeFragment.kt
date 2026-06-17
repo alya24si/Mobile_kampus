@@ -15,6 +15,7 @@ import com.example.cintaku.AuthActivity
 import com.example.cintaku.Data.api.PhotoApiClient
 import com.example.cintaku.Home.pertemuan2.SecondActivity
 import com.example.cintaku.Home.pertemuan_10.TenthActivity
+import com.example.cintaku.Home.pertemuan_13.ThirteenthActivity
 import com.example.cintaku.Home.pertemuan_3.ThirdActivity
 import com.example.cintaku.Home.pertemuan_4.FourthActivity
 import com.example.cintaku.Home.pertemuan_5.FifthActivity
@@ -89,6 +90,11 @@ class HomeFragment : Fragment() {
         binding.btnToTenth.setOnClickListener {
 
             val intent = Intent (requireContext(), TenthActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnthirteenth.setOnClickListener {
+
+            val intent = Intent (requireContext(), ThirteenthActivity::class.java)
             startActivity(intent)
         }
 
